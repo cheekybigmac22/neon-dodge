@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Libre+Barcode+39+Text&family=Orbitron:wght@500;700;900&display=swap');
+
+:root { color-scheme: dark; }
+* { box-sizing: border-box; }
+body { min-height: 100vh; margin: 0; display: grid; place-items: center; overflow-x: hidden; color: #eeeafb; background: #06060a; font-family: 'DM Mono', monospace; }
+body::after { content: ''; position: fixed; inset: 0; pointer-events: none; opacity: .18; background: repeating-linear-gradient(0deg, transparent 0 3px, rgba(255,255,255,.08) 4px); mix-blend-mode: screen; }
+main { width: min(92vw, 550px); padding: 26px 0 18px; text-align: center; }
+header { margin-bottom: 14px; }
+.eyebrow { margin: 0 0 2px; color: #b92d49; font-size: .64rem; letter-spacing: .28em; }
+h1 { margin: 0; color: #eeeafb; font-family: Orbitron, sans-serif; font-size: clamp(2rem, 8vw, 3.8rem); line-height: 1; letter-spacing: .11em; text-shadow: -2px 0 #8b193f, 2px 0 #176a82; }
+.subtitle { margin: 7px 0 0; color: #9f9aac; font-family: 'Libre Barcode 39 Text', monospace; font-size: 1.7rem; letter-spacing: .08em; }
+.game-shell { position: relative; overflow: hidden; border: 1px solid #3f394b; border-radius: 5px; background: #0b0a11; box-shadow: 0 0 0 5px #110d17, 0 0 45px rgba(159,17,54,.25); }
+.hud { position: absolute; z-index: 3; top: 0; left: 0; right: 0; display: flex; justify-content: space-between; padding: 13px 15px; color: #bbb3c7; font-size: .67rem; letter-spacing: .09em; text-shadow: 0 1px #000; }
+.hud b { color: #f1e9ee; }
+canvas { display: block; width: 100%; height: auto; touch-action: none; }
+.overlay { position: absolute; z-index: 4; inset: 0; display: grid; align-content: center; justify-items: center; gap: 10px; padding: 35px; background: rgba(6,6,10,.72); backdrop-filter: blur(2px); }
+.overlay.hidden { display: none; }
+.signal { margin: 0; color: #aa2744; font-size: .62rem; letter-spacing: .18em; }
+h2 { max-width: 100%; margin: 0; font-family: Orbitron, sans-serif; font-size: clamp(1.35rem, 5vw, 2.15rem); letter-spacing: .05em; text-shadow: -2px 0 #7c2540, 2px 0 #176b7a; }
+.overlay > p:not(.signal) { max-width: 360px; margin: 0 0 8px; color: #c2bdca; font-size: .76rem; line-height: 1.65; }
+button { border: 1px solid #c7bbc7; border-radius: 2px; padding: 12px 20px; color: #f6edf1; background: #891d3b; font: 500 .76rem 'DM Mono', monospace; letter-spacing: .12em; cursor: pointer; box-shadow: 3px 3px 0 #191118; }
+button:hover { background: #af294e; transform: translate(-1px,-1px); box-shadow: 5px 5px 0 #191118; }
+.motion { margin-top: 4px; color: #b5aeb9; font-size: .64rem; cursor: pointer; }
+.motion input { accent-color: #9f2646; vertical-align: -2px; }
+.instructions { margin: 14px 0 0; color: #827a8d; font-size: .64rem; line-height: 1.7; }
+kbd { border: 1px solid #47404e; border-radius: 2px; padding: 1px 5px; color: #d8d1dd; font: inherit; }
