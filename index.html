@@ -1,31 +1,47 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Afterimage: Last Drive</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <main>
-      <header>
-        <p class="eyebrow">DO NOT LET IT CATCH UP</p>
-        <h1>AFTERIMAGE</h1>
-        <p class="subtitle">LAST DRIVE</p>
-      </header>
-      <section class="game-shell" aria-label="Afterimage: Last Drive game">
-        <div class="hud"><span>DISTANCE <b id="distance">0m</b></span><span>BEST <b id="best">0m</b></span></div>
-        <canvas id="game" width="480" height="680" aria-label="Game area"></canvas>
-        <div class="overlay" id="overlay">
-          <p class="signal">// SIGNAL FOUND //</p>
-          <h2 id="message">KEEP DRIVING</h2>
-          <p id="submessage">The road remembers every turn you make.</p>
-          <button id="start">START ENGINE</button>
-          <label class="motion"><input id="reduce-motion" type="checkbox" /> Reduce motion effects</label>
-        </div>
-      </section>
-      <p class="instructions">Steer with <kbd>←</kbd><kbd>→</kbd> or <kbd>A</kbd><kbd>D</kbd>. On touch screens, drag to steer.</p>
-    </main>
-    <script src="game.js"></script>
-  </body>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AFTERIMAGE: LAST DRIVE</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<main>
+  <header>
+    <p class="eyebrow">DO NOT LET HER CATCH UP</p>
+    <h1>AFTERIMAGE</h1>
+    <p class="subtitle">LAST DRIVE</p>
+  </header>
+  <section class="game-shell" aria-label="Afterimage Last Drive horror driving game">
+    <div class="hud">
+      <span>DISTANCE <b id="distance">0m</b></span>
+      <span>BIOME <b id="biome">HIGHWAY</b></span>
+      <span>BOOST <b id="boost">—</b></span>
+    </div>
+    <canvas id="game" width="480" height="680" aria-label="Game area"></canvas>
+    <div class="event" id="event" aria-live="polite"></div>
+    <div class="overlay" id="overlay">
+      <p class="signal">// SIGNAL FOUND //</p>
+      <h2 id="message">KEEP DRIVING</h2>
+      <p id="submessage">The road starts normal. It won't stay that way.</p>
+      <button id="start">START ENGINE</button>
+      <label class="motion"><input id="reduce-motion" type="checkbox" /> Reduce motion effects</label>
+    </div>
+    <div class="memory-overlay hidden" id="memory-overlay">
+      <p class="memory-label">REMEMBER THIS</p>
+      <div class="memory-number" id="memory-number">22</div>
+      <p class="memory-help">Keep driving. Choose the real number.</p>
+      <div class="doors">
+        <button id="door-left">22</button>
+        <button id="door-right">27</button>
+      </div>
+    </div>
+  </section>
+  <p class="instructions"><kbd>←</kbd><kbd>→</kbd> / <kbd>A</kbd><kbd>D</kbd> steer · <kbd>SPACE</kbd> / <kbd>SHIFT</kbd> boost · touch to steer</p>
+  <p class="tiny">The farther you drive, the more of their world replaces yours.</p>
+  <p class="bestline">BEST <b id="best">0m</b></p>
+</main>
+<script src="game.js"></script>
+</body>
 </html>
